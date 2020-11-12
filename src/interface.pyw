@@ -1,4 +1,4 @@
-from PySide2 import QtWidgets, QtCore, QtGui, QtWebEngineWidgets
+from PySide2 import QtWidgets, QtCore, QtGui
 from readstyle import readStyle
 from newmain import AddIt, CheckIt, RemoveIt
 from functools import partial

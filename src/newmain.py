@@ -9,8 +9,7 @@ from PySide2.QtWidgets import (
     QMessageBox, QDialog, QMessageBox,
     QVBoxLayout, QLabel, QLineEdit
 )
-from PySide2 import QtGui
-
+from PySide2 import QtGui, QtCore
 
 ## DB
 ## SOCORRO!! lembra o tamnho dessas linhas?? kkk
@@ -48,12 +47,14 @@ def AddIt(**kwargs):
             background-color: rgba(0, 0, 0, 100);
             text-align: center; padding: 10px;">{gamename}</h3></a> está custando 
             <h3 style="color: red; background-color: rgba(0, 0, 0, 100); text-align: center;
-            padding: 5px; border-radius: 10px;">R${gameactualpricev}.</h3>
+            padding: 5px; border-radius: 10px;">R$ {gameactualpricev}.</h3>
             <p>Você quer que o valor esteja abaixo de quanto para ser avisado?<br> 
-            Exemplo de entrada: 9.00 Se o jogo custar R$15,35 quando estiver<br>
-            abaixo de R$9,00, você será notificado</p>
+            Exemplo de entrada: R$ 9.00 Se o jogo custar R$ 15,35 quando estiver<br>
+            abaixo de R$ 9,00, você será notificado</p>
             '''
         )
+        lab.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
+        lab.setOpenExternalLinks(True)
         gam = QLineEdit(app)
         gam.setPlaceholderText('Pressione <Enter> para confirmar...')
         gam.returnPressed.connect(retorno)
@@ -78,7 +79,6 @@ def AddIt(**kwargs):
             QMessageBox.StandardButton.Ok
         )
         return
-    
     soup = BeautifulSoup(r.text, "html.parser")
     gamename = soup.find(class_="apphub_AppName")
     
