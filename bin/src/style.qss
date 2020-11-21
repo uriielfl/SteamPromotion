@@ -1,0 +1,50 @@
+QWidget {
+    background-color: qradialgradient(spread:pad,
+    cx:0.523,
+    cy:0.556818,
+    radius:0.5,
+    fx:0.516,
+    fy:0.590909,
+    stop:0.244318 rgba(9, 10, 12, 255),
+    stop:0.943182 rgba(9, 24, 35, 255));
+} 
+QPushButton {
+    background-color: rgba(0, 0, 0, 100);
+    font: 100 14pt "Arial";
+    color: rgba(255, 255, 255, 200);
+    border-style: outset;
+    border-color: rgba(255, 255, 255, 255);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 5px;
+} 
+QLabel {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(200, 212, 228, 210);
+    font: 100 14pt "Arial sans-serif";
+} 
+QLineEdit {
+    background-color: rgba(0, 0, 0, 100);
+    font: 100 14pt "Arial";
+    color: rgba(255, 255, 255, 200);
+    border-style: outset;
+    border-color: rgba(255, 255, 255, 255);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 5px;
+} 
+QPushButton:hover {
+    background-color: rgba(0, 0, 0, 20);
+    font: 100 14pt "Arial";
+    color: rgba(255, 255, 255, 200);
+    border-style: outset;
+    border-color: rgba(255, 255, 255, 200);
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 5px;
+}
+QListWidget {
+    background-color: rgba(0, 0, 0, 100);
+    color: rgb(200, 255, 0);
+    font: 100 12pt "Arial";
+}
