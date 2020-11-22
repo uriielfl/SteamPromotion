@@ -29,3 +29,9 @@ Create a list of games that you wish on Steam and be notified when the price get
                 
 ```
 ![promotion](https://i.imgur.com/P31mwkr.png)
+
+## Add GUI with PySide2
+
+<img src="img/initialpage.png">
+<img src="img/savepage.png">
+<img src="img/checked.png">
